@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDPLibrary.Entities", "IDPLibrary.Entities\IDPLibrary.Entities.csproj", "{77191600-7747-4749-B20A-A17730577CB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDPLibrary.Entities", "IDPLibrary.Entities\IDPLibrary.Entities.csproj", "{77191600-7747-4749-B20A-A17730577CB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDPLibrary.Clients", "IDPLibrary.Clients\IDPLibrary.Clients.csproj", "{7944F9C3-7271-4049-B2BE-3ABD2384265B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{77191600-7747-4749-B20A-A17730577CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77191600-7747-4749-B20A-A17730577CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77191600-7747-4749-B20A-A17730577CB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7944F9C3-7271-4049-B2BE-3ABD2384265B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7944F9C3-7271-4049-B2BE-3ABD2384265B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7944F9C3-7271-4049-B2BE-3ABD2384265B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7944F9C3-7271-4049-B2BE-3ABD2384265B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
