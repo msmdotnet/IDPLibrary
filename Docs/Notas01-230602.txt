@@ -1,0 +1,44 @@
+API Para implementar el flujo OAuth + Oidc: Code Flow + PKCE
+
+- Backend
+
+- Interfaces Blazor (Library)
+- La API podrá ser consumida por clientes OAuth + Oidc
+
+API Backend debe exponer:
+   - Authorization Endpoint 
+     Recibe peticiones HTTP GET
+      * response_type, State, redirect_uri, client_id, code challenge, code challenge method, 
+      * nonce, scope
+
+        - Verificar que sea un cliente válido (Necesita de los datos de clientes)
+           - ClientId
+           - RedirectUri (Uno o más)
+        - Generar un IdRequest
+        - Almacenar:
+           - IdRequest
+           - State, redirect_uri, client_id, code_challenge, code_method, Nonce, Scope
+        - Generar el URL de direccionamiento
+        - Dirigir al usuario a la página de autenticación
+           - Necesitará datos del usuario:
+                - Username
+                - Password
+        - (Opcionalmente) Mostrar la página de consentimiento
+        - Dirigir al usuario al Redirect_Uri proporcionado enviando en el QueryString el State y Code
+
+   - Token Endpoint 
+     Recibe peticiones HTTP POST
+     * Grant_Type, State, Code, redirect_uri, Client_Id, Clint_Secret, Code Verifier, Scope
+ 
+        - Verificar el Codigo de autorización
+        - Verificar Scope, redirecturi, code challenge, client_id, client_secret
+        - Devuelve los tokens: Id Token, Refresh Token, Acces Token, expiración
+
+
+   - Opcionalmente: Tokeninfo Endpoint
+   - Opcionalmente: Discovery endpoint
+
+              
+
+        
+   
