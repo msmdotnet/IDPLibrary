@@ -7,6 +7,8 @@ public class ClientProviderTests
     [InlineData("client1", "https://localhost/callback2", false)]
     [InlineData("client2", "https://localhost/callback", false)]
     [InlineData("client2", "https://localhost/callback2", false)]
+    [InlineData("", "https://localhost/callback2", false)]
+    [InlineData("client1", " ", false)]
     public async void GetClientAsync_ExistingClient_ReturnClient(string clientId,
         string redirectUri, bool exists)
     {
@@ -16,8 +18,8 @@ public class ClientProviderTests
             new Client
             {
                  ClientId = "client1",
-                  ClientSecret = "clientsecret1",
-                   RedirectUris = new string[]{"https://localhost/callback"}
+                 ClientSecret = "clientsecret1",
+                 RedirectUris = new string[]{"https://localhost/callback"}
             }
         };
         var ClientOptions = Options.Create(new MemoryClientListOptions { Clients = Clients});
