@@ -6,9 +6,21 @@ internal class ClientProvider : IClientProvider
     {
         Clients = new List<Client>(options.Value.Clients);
     }
-    public Task<Client> GetClientAsync(string clientId, string redirectUri) =>
 
-        clientId == "client1" && redirectUri == "https://localhost/callback" ?
-        Task.FromResult(new Client { ClientId = clientId, RedirectUris = new string[] { redirectUri } }) :
-        Task.FromResult<Client>(null);
+    public Task<Client> GetClientAsync(string clientId, string redirectUri)
+    {
+        Client Client = null;
+        if(ClientIdAndRedirectUriHasValue(clientId, redirectUri))
+        {
+            Client = Clients.FirstOrDefault(c => c.ClientId == clientId && c.RedirectUris.Contains(redirectUri));
+        }
+        return Task.FromResult(Client);
+    }
+
+    bool ClientIdAndRedirectUriHasValue(string clientId, string redirectUri)
+    {
+        bool Result = !string.IsNullOrWhiteSpace(clientId) &&
+                      !string.IsNullOrWhiteSpace(redirectUri);
+        return Result;
+    }
 }
