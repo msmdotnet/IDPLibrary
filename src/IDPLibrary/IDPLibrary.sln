@@ -5,11 +5,13 @@ VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDPLibrary.Entities", "IDPLibrary.Entities\IDPLibrary.Entities.csproj", "{77191600-7747-4749-B20A-A17730577CB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDPLibrary.MemoryClientProvider", "IDPLibrary.MemoryClientProvider\IDPLibrary.MemoryClientProvider.csproj", "{693C29B6-E162-4CE7-B308-007068591CFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDPLibrary.MemoryClientProvider", "IDPLibrary.MemoryClientProvider\IDPLibrary.MemoryClientProvider.csproj", "{693C29B6-E162-4CE7-B308-007068591CFB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0BBF85A4-609B-4FC2-A78E-D6D1B17C6A31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDPLibrary.MemoryClientProviderTests", "..\..\tests\IDPLibrary.MemoryClientProviderTests\IDPLibrary.MemoryClientProviderTests.csproj", "{F2752C35-34EB-499F-89D4-36F79624FF6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDPLibrary.MemoryClientProviderTests", "..\..\tests\IDPLibrary.MemoryClientProviderTests\IDPLibrary.MemoryClientProviderTests.csproj", "{F2752C35-34EB-499F-89D4-36F79624FF6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDPLibrary.MemoryCacheState", "IDPLibrary.MemoryCacheState\IDPLibrary.MemoryCacheState.csproj", "{01C0D864-7693-4CA3-8F43-F6241B2A6945}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{F2752C35-34EB-499F-89D4-36F79624FF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2752C35-34EB-499F-89D4-36F79624FF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2752C35-34EB-499F-89D4-36F79624FF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C0D864-7693-4CA3-8F43-F6241B2A6945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C0D864-7693-4CA3-8F43-F6241B2A6945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C0D864-7693-4CA3-8F43-F6241B2A6945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C0D864-7693-4CA3-8F43-F6241B2A6945}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
